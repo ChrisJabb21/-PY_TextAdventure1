@@ -1,0 +1,55 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Sep 30 15:46:08 2018
+
+@author: Chris
+
+
+Christopher Jabbour
+
+Assignment 4: make a program involving the use and alteration of strings.
+
+This program is a mad libs generator,
+A tribute to a well known popular word game.
+
+It will take user input in the form of strings and put them
+ together to into a premade a Mad Lib story. 
+ Once the user has entered all their inputs, 
+ the program will return the mad libs story 
+ with the users inputs for their entertainment. 
+
+"""
+    
+#function that will contain the story and all the user inputs using concatention 
+def MadLib():
+    
+    #function to take user inputs    
+    #variable declarations with input statements for user.
+    #program greeting and welcome message
+    print("\n Welcome, This program is a Mad Libs generator that will take your inputs and put together a story using your inputs. The theme is the time you almost caught a type of animal after school.\n\n") 
+
+    #variables declarations or nouns as strings for the mad lib story
+    animal = str(input("Enter a type of animal. Real or made up.\n >> "))
+    
+    place = str(input("Enter a place or type of hangout, it could be any place you want.\n >>"))
+    
+    #the capitialize function to captialize the first letter of friend variable in case user forgets.
+    friend =  str(input("Enter the name of a friend. \n >> "))
+    #the function title() captializes every first letter of a word in the friend variable 
+    Friend = friend.title()
+    
+    thing = str(input("Enter a thing or tool you would use to try to catch something with. \n >> "))
+    
+    bodypart = str(input("Enter a body part or limb you would fall, trip or land on while running at full speed. \n >> "))
+        
+    #Title of Mad Lib with animal variable
+    print(f"\n ------------------------------ \n Title: The Time I Almost Caught a {animal} \n ------------------------------")
+    
+    #an f string is used to allow the variables as placeholders
+    #adding any character after the bracket notations {bodypart}s concatnates the character after the string.
+    
+    #Story with placeholder variables
+    print(f"While hanging out after school at {place}, I saw a {animal} perched up in a tree. My friend {Friend} says we should try to catch it. I swiftly grab my {thing} from my backpack. As i a got my {thing} out, the {animal} jumped out of the tree. My friend and I chased it away from {place} and followed it back to my house running at full speed. Me and {Friend} both slipped and landed on our {bodypart}s and yelled in pain and embarrassment. Curious about the noise, my mom yelled at us for an explanation, we told her about the {animal} and said we are crazy and to come in for dinner.")
+    
+    
